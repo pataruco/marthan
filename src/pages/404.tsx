@@ -21,7 +21,7 @@ const StyledMain = styled.main`
 
 const ErrorPage: React.FC = () => (
   <StyledMain>
-    <h1>Home</h1>
+    <h1>404</h1>
   </StyledMain>
 );
 
