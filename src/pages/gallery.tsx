@@ -7,13 +7,17 @@ const Gallery: React.FC = () => {
 
   return (
     <main>
-      {imagesPaths.map((imagePath, i) => (
-        <article key={i}>
-          <picture>
-            <img src={imagePath[250]} alt="" />
-          </picture>
-        </article>
-      ))}
+      <h1>Gallery</h1>
+      {imagesPaths.map((imagePath, i) => {
+        console.log({ imagePath });
+        return (
+          <article key={i}>
+            <picture>
+              <img src={imagePath[250]} alt="" />
+            </picture>
+          </article>
+        );
+      })}
     </main>
   );
 };
