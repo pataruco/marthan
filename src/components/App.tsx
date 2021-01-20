@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import 'normalize.css';
 
 const StyledDiv = styled.div`
   min-height: 100vh;
@@ -21,10 +22,6 @@ const StyledDiv = styled.div`
 
   main {
     flex: 1 auto;
-  }
-
-  .spectacle-progress-indicator {
-    text-align: center;
   }
 `;
 
