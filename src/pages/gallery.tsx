@@ -13,6 +13,7 @@ import Footer from '../components/footer';
 import styled from 'styled-components';
 
 const imagesPaths800 = imagesPaths.map((path) => path[800]);
+const imagesPaths250 = imagesPaths.map((path) => path[250]);
 
 const GalleryMain = styled(Main)`
   section {
@@ -47,11 +48,11 @@ const Gallery: React.FC = () => {
       <GalleryMain>
         <h1>Galería</h1>
         <section>
-          {imagesPaths.map((imagePath, i) => {
+          {imagesPaths250.map((imagePath, i) => {
             return (
               <article key={i} onClick={handleClick} data-slide-number={i}>
                 <picture>
-                  <img src={imagePath[250]} alt="" />
+                  <img src={imagePath} alt={imagePath} />
                 </picture>
               </article>
             );
