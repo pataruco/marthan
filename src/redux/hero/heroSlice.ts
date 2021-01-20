@@ -1,5 +1,5 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { RootState } from '../store';
+import { createSlice } from '@reduxjs/toolkit';
+import { AppThunk, RootState } from '../store';
 import backgroundImagePaths from '../../components/gallery/paths';
 
 interface HeroState {
@@ -8,8 +8,8 @@ interface HeroState {
 
 const getRandomBackgroundImageIndex = (
   min: number = 0,
-  max: number = backgroundImagePaths.length,
-) => Math.random() * (max - min) + min;
+  max: number = backgroundImagePaths.length - 1,
+) => Math.floor(Math.random() * (max - min) + min);
 
 const initialState: HeroState = {
   backgroundImagePath:
@@ -28,6 +28,16 @@ export const heroSlice = createSlice({
 });
 
 export const { setRandomBackgroundImageIndex } = heroSlice.actions;
+
+let interval: NodeJS.Timeout;
+
+export const changeBackgroundInterval = (): AppThunk => (dispatch) => {
+  interval = setInterval(() => {
+    dispatch(setRandomBackgroundImageIndex());
+  }, 6000);
+
+  console.log({ interval });
+};
 
 export const selectHero = (state: RootState) => state.hero;
 

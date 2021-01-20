@@ -10,14 +10,6 @@ import {
 
 const imagesPaths800 = imagesPaths.map((path) => path[800]);
 
-const LightBoxImages = imagesPaths800.map((imagePath, i) => (
-  <>
-    <picture key={i}>
-      <img src={imagePath} alt="" />
-    </picture>
-  </>
-));
-
 const Gallery: React.FC = () => {
   const dispatch = useDispatch();
   const { isOpen, slideNumber } = useSelector(selectGallery);

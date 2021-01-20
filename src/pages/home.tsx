@@ -6,16 +6,15 @@ import Footer from '../components/footer';
 
 const Content = lazy(() => importMDX('../content/home.md'));
 
+const StyledMain = styled.main`
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: -10vh;
+  background-color: white;
+  padding: 1.25rem;
+`;
 const Home: React.FC = () => {
-  const StyledMain = styled.main`
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    margin-top: -10vh;
-    background-color: white;
-    padding: 1.25rem;
-  `;
-
   return (
     <>
       <Header />
