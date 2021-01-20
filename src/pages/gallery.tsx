@@ -45,7 +45,7 @@ const Gallery: React.FC = () => {
     <>
       <Header />
       <GalleryMain>
-        <h1>Gallery</h1>
+        <h1>Galería</h1>
         <section>
           {imagesPaths.map((imagePath, i) => {
             return (

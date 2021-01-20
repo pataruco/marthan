@@ -2,10 +2,6 @@ const { PUBLIC_URL } = process.env;
 
 const paths = [
   {
-    800: `${PUBLIC_URL}/images/800/03.png`,
-    250: `${PUBLIC_URL}/images/250/03.png`,
-  },
-  {
     800: `${PUBLIC_URL}/images/800/04.png`,
     250: `${PUBLIC_URL}/images/250/04.png`,
   },
