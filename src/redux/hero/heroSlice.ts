@@ -37,14 +37,10 @@ export const heroSlice = createSlice({
 
 export const { setRandomBackgroundImageIndex } = heroSlice.actions;
 
-let interval: NodeJS.Timeout;
-
 export const changeBackgroundInterval = (): AppThunk => (dispatch) => {
-  interval = setInterval(() => {
+  setInterval(() => {
     dispatch(setRandomBackgroundImageIndex());
   }, TRANSITION_TIME * 2000);
-
-  console.log({ interval });
 };
 
 export const selectHero = (state: RootState) => state.hero;
