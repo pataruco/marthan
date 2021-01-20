@@ -15,21 +15,19 @@ const StyledHeader = styled.header`
   @keyframes flash {
     0% {
       opacity: 0.1;
+      background-color: rgb(127, 127, 127);
     }
 
     100% {
       opacity: 1;
+      background-color: rgb(0, 0, 0);
     }
   }
-
   background-image: url(${setBackgroundImage});
   min-height: 45vh;
-  background-color: black;
   background-repeat: no-repeat;
   background-position: top center;
-  transition: all ease 1s;
   animation: flash linear alternate infinite ${TRANSITION_TIME}s;
-  background-attachment: fixed;
 `;
 
 const Header: React.FC = () => {
@@ -40,11 +38,7 @@ const Header: React.FC = () => {
     dispatch(changeBackgroundInterval());
   }, [dispatch]);
 
-  return (
-    <StyledHeader backgroundImageUrl={backgroundImagePath}>
-      <div className="blend"></div>
-    </StyledHeader>
-  );
+  return <StyledHeader backgroundImageUrl={backgroundImagePath} />;
 };
 
 export default Header;

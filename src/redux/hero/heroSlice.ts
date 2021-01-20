@@ -7,7 +7,7 @@ interface HeroState {
   index: number;
 }
 
-export const TRANSITION_TIME = 3;
+export const TRANSITION_TIME = 5;
 
 const getRandomBackgroundImageIndex = (
   min: number = 0,
