@@ -6,34 +6,38 @@ const imagesPaths800 = imagesPaths.map((path) => path[800]);
 
 const Gallery: React.FC = () => {
   const [toggler, setToggler] = useState(false);
-  const [productIndex, setProductIndex] = useState(0);
+  const [slideNumber, setSlideNumber] = useState(1);
 
   const handleClick = (event: React.MouseEvent) => {
+    const { currentTarget } = event;
+
+    const cardNumber =
+      Number(currentTarget.getAttribute('data-slide-number')) ?? 1;
+
     event.preventDefault();
     setToggler(!toggler);
-    // setProductIndex();
+    setSlideNumber(cardNumber + 1);
   };
 
   return (
     <main>
       <h1>Gallery</h1>
-      {imagesPaths.map((imagePath, i) => {
-        console.log({ imagePath });
-        return (
-          <article key={i} onClick={handleClick}>
-            <picture>
-              <img src={imagePath[250]} alt="" />
-            </picture>
-          </article>
-        );
-      })}
+      <section>
+        {imagesPaths.map((imagePath, i) => {
+          return (
+            <article key={i} onClick={handleClick} data-slide-number={i}>
+              <picture>
+                <img src={imagePath[250]} alt="" />
+              </picture>
+            </article>
+          );
+        })}
+      </section>
 
-      <button onClick={() => setToggler(!toggler)}>Toggle Lightbox</button>
-      <button onClick={() => setProductIndex(1)}>Load second product</button>
       <FsLightbox
         toggler={toggler}
         sources={imagesPaths800}
-        key={productIndex}
+        slide={slideNumber}
       />
     </main>
   );
