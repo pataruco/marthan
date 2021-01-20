@@ -1,12 +1,26 @@
-import React, { useState } from 'react';
+import React from 'react';
 import FsLightbox from 'fslightbox-react';
 import imagesPaths from '../components/gallery/paths';
+import { useDispatch, useSelector } from 'react-redux';
+import {
+  selectGallery,
+  setSlideNumber,
+  toggleOpen,
+} from '../redux/gallery/gallerySlice';
 
 const imagesPaths800 = imagesPaths.map((path) => path[800]);
 
+const LightBoxImages = imagesPaths800.map((imagePath, i) => (
+  <>
+    <picture key={i}>
+      <img src={imagePath} alt="" />
+    </picture>
+  </>
+));
+
 const Gallery: React.FC = () => {
-  const [toggler, setToggler] = useState(false);
-  const [slideNumber, setSlideNumber] = useState(1);
+  const dispatch = useDispatch();
+  const { isOpen, slideNumber } = useSelector(selectGallery);
 
   const handleClick = (event: React.MouseEvent) => {
     const { currentTarget } = event;
@@ -15,8 +29,8 @@ const Gallery: React.FC = () => {
       Number(currentTarget.getAttribute('data-slide-number')) ?? 1;
 
     event.preventDefault();
-    setToggler(!toggler);
-    setSlideNumber(cardNumber + 1);
+    dispatch(toggleOpen());
+    dispatch(setSlideNumber(cardNumber + 1));
   };
 
   return (
@@ -35,7 +49,7 @@ const Gallery: React.FC = () => {
       </section>
 
       <FsLightbox
-        toggler={toggler}
+        toggler={isOpen}
         sources={imagesPaths800}
         slide={slideNumber}
       />
