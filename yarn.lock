@@ -6137,6 +6137,10 @@ fsevents@^2.1.2, fsevents@^2.1.3, fsevents@~2.3.1:
   resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-2.3.1.tgz#b209ab14c61012636c8863507edf7fb68cc54e9f"
   integrity sha512-YR47Eg4hChJGAB1O3yEAOkGO+rlzutoICGqGo9EZ4lKWokzZRSyIW1QmTzqjtw8MJdj9srP869CuWw/hyzSiBw==
 
+fslightbox-react@./src/utils/fslightbox-react-pro-1.4.2.tgz:
+  version "1.4.2"
+  resolved "./src/utils/fslightbox-react-pro-1.4.2.tgz#aa6c77ceb2feb8487853163cb9a3d3a3d91ca85f"
+
 fslightbox-react@^1.6.2:
   version "1.6.2"
   resolved "https://registry.yarnpkg.com/fslightbox-react/-/fslightbox-react-1.6.2.tgz#d4456843508f1a916277583204fb4d880057941f"
