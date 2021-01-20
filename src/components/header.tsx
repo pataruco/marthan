@@ -3,7 +3,11 @@ import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { useDispatch, useSelector } from 'react-redux';
 import paths from '../components/gallery/paths';
-import { selectHero, changeBackgroundInterval } from '../redux/hero/heroSlice';
+import {
+  selectHero,
+  changeBackgroundInterval,
+  TRANSITION_TIME,
+} from '../redux/hero/heroSlice';
 
 const setBackgroundImage = (props) => props.backgroundImageUrl || paths[0][800];
 
@@ -24,7 +28,7 @@ const StyledHeader = styled.header`
   background-repeat: no-repeat;
   background-position: top center;
   transition: all ease 1s;
-  animation: flash linear alternate infinite 3s;
+  animation: flash linear alternate infinite ${TRANSITION_TIME}s;
   background-attachment: fixed;
 `;
 

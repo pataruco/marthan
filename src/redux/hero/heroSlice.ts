@@ -7,6 +7,8 @@ interface HeroState {
   index: number;
 }
 
+export const TRANSITION_TIME = 3;
+
 const getRandomBackgroundImageIndex = (
   min: number = 0,
   max: number = backgroundImagePaths.length - 1,
@@ -40,7 +42,7 @@ let interval: NodeJS.Timeout;
 export const changeBackgroundInterval = (): AppThunk => (dispatch) => {
   interval = setInterval(() => {
     dispatch(setRandomBackgroundImageIndex());
-  }, 6000);
+  }, TRANSITION_TIME * 2000);
 
   console.log({ interval });
 };
