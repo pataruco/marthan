@@ -3,15 +3,12 @@ import styled from 'styled-components';
 import 'normalize.css';
 
 const StyledDiv = styled.div`
-  @import 'node_modules/@ibm/plex/scss/ibm-plex.scss';
-
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-
-  font-family: 'IBM Plex Sans Condensed', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'IBM Plex Sans', Helvetica, Arial, sans-serif;
   font-size: 100%;
-  line-height: 1.5em;
+  line-height: 1.5rem;
+  min-height: 100vh;
 
   h1,
   h2,
