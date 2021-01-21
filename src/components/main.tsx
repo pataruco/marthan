@@ -4,7 +4,7 @@ const Main = styled.main`
   width: 100%;
   max-width: 980px;
   margin: 0 auto;
-  margin-top: -10vh;
+  /* margin-top: -5vh; */
   background-color: white;
   position: relative;
   z-index: 10;

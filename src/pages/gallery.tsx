@@ -23,6 +23,7 @@ const GalleryMain = styled(Main)`
     & > * {
       flex-basis: calc(33.33% - 1.25rem);
       margin-bottom: 1.25rem;
+      cursor: pointer;
     }
   }
 
@@ -52,7 +53,6 @@ const Gallery: React.FC = () => {
 
   return (
     <>
-      <Header />
       <GalleryMain>
         <h1>Galería</h1>
         <section>

@@ -34,4 +34,4 @@ Le sobreviven sus dos hijos, Yoana y Pedro; cuatro nietos, Miguel, Alejandra, Pe
 - **1995** El Desafio (TV serie)
 - **1996** El perdón de los pecados (TV serie)
 
-## [Galeria de fotos](/gallery)
+## [Galería de fotos](/gallery)
