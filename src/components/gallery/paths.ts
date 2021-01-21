@@ -254,10 +254,6 @@ const paths = [
     250: `${PUBLIC_URL}/images/250/66.png`,
   },
   {
-    800: `${PUBLIC_URL}/images/800/67.png`,
-    250: `${PUBLIC_URL}/images/250/67.png`,
-  },
-  {
     800: `${PUBLIC_URL}/images/800/68.png`,
     250: `${PUBLIC_URL}/images/250/68.png`,
   },
@@ -282,16 +278,8 @@ const paths = [
     250: `${PUBLIC_URL}/images/250/73.png`,
   },
   {
-    800: `${PUBLIC_URL}/images/800/74.png`,
-    250: `${PUBLIC_URL}/images/250/74.png`,
-  },
-  {
     800: `${PUBLIC_URL}/images/800/75.png`,
     250: `${PUBLIC_URL}/images/250/75.png`,
-  },
-  {
-    800: `${PUBLIC_URL}/images/800/76.png`,
-    250: `${PUBLIC_URL}/images/250/76.png`,
   },
   {
     800: `${PUBLIC_URL}/images/800/77.png`,

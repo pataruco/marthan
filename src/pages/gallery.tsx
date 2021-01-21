@@ -25,6 +25,14 @@ const GalleryMain = styled(Main)`
       margin-bottom: 1.25rem;
     }
   }
+
+  @media screen and (max-width: 800px) {
+    section {
+      & > * {
+        flex-basis: calc(50% - 1.25rem);
+      }
+    }
+  }
 `;
 
 const Gallery: React.FC = () => {
