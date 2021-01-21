@@ -1,44 +1,62 @@
-// @ts-nocheck
-import React, { useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import { useDispatch, useSelector } from 'react-redux';
 import paths from '../lib/paths';
-import {
-  selectHero,
-  changeBackgroundInterval,
-  TRANSITION_TIME,
-} from '../redux/hero/heroSlice';
 
-const setBackgroundImage = (props) => props.backgroundImageUrl || paths[0][800];
+import Carousel from 'react-alice-carousel';
+import 'react-alice-carousel/lib/alice-carousel.css';
+import { Props } from 'react-alice-carousel/lib/types';
+
+const paths800 = paths.map((path) => path[800]);
+
+const handleDragStart = (e: React.MouseEvent) => e.preventDefault();
+
+const slides = paths800.map((path) => {
+  return (
+    <picture className="slide">
+      <img src={path} onDragStart={handleDragStart} alt="" />
+    </picture>
+  );
+});
 
 const StyledHeader = styled.header`
-  @keyframes flash {
-    0% {
-      opacity: 0.1;
-      background-color: rgb(127, 127, 127);
-    }
-
-    100% {
-      opacity: 1;
-      background-color: rgb(0, 0, 0);
-    }
-  }
-  background-image: url(${setBackgroundImage});
   min-height: 45vh;
-  background-repeat: no-repeat;
-  background-position: top center;
-  animation: flash linear alternate infinite ${TRANSITION_TIME}s;
+  background-color: rgb(0, 0, 0);
+
+  .carrousel-wrapper {
+    max-width: 50%;
+    margin: 0 auto;
+  }
+
+  .alice-carousel__stage-item {
+    width: 100% !important;
+  }
+
+  .slide {
+    width: 100%;
+    object-fit: cover;
+  }
 `;
 
 const Header: React.FC = () => {
-  const dispatch = useDispatch();
-  const { backgroundImagePath } = useSelector(selectHero);
-
-  useEffect(() => {
-    dispatch(changeBackgroundInterval());
-  }, [dispatch]);
-
-  return <StyledHeader backgroundImageUrl={backgroundImagePath} />;
+  return (
+    <StyledHeader>
+      <div className="carrousel-wrapper">
+        <Carousel
+          animationDuration={10000}
+          animationType={'fadeout'}
+          autoPlay
+          autoPlayStrategy={'none'}
+          autoWidth
+          // autoHeight
+          disableButtonsControls
+          disableDotsControls
+          infinite
+          items={slides}
+          mouseTracking
+        />
+      </div>
+    </StyledHeader>
+  );
 };
 
 export default Header;
