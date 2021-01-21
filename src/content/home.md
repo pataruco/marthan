@@ -4,7 +4,7 @@
 
 Nació el día de San Pedro y San Pablo (29 de junio) de 1926 en Santa Clara, Cuba con el nombre de Pedro Martín Perez. Fue el menor de tres hermanos, Juan y Fidel.
 
-Murió en Valencia, Venezuela por causas naturales, el 18 de enero de 2021 a los 95 años.
+Murió en Valencia, Venezuela por causas naturales, el 18 de enero de 2021 a los 94 años.
 
 Sus padres Bernabé Martín Yanes y Toribia Perez Perez emigraron desde las islas Canarias. Allí se radicaron un tiempo hasta que en 1939 emigraron a Venezuela a bordo del [SS Cuba](https://en.wikipedia.org/wiki/German_submarine_U-1195#Service_history).
 
@@ -14,7 +14,7 @@ Inició su carrera artística como actor en 1945, a los 19 años de edad.
 
 Trabajo en [Televisa](<https://es.wikipedia.org/wiki/Televisa_(Venezuela)>) (antesesor de Venevisión) desde 1953 a 1961 y luego en RCTV
 
-Le sobreviven sus dos hijos, Yoana y Pedro; cuatro nietos, Miguel, Alejandra, Peter y Miranda; 3 bisnietos.
+Le sobreviven sus dos hijos, Yoana y Pedro; cuatro nietos, Miguel, Alejandra, Peter y Miranda; 3 bisnietos, Leticia, Noah, Matias.
 
 ## Filmografía
 
