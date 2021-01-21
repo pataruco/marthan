@@ -34,21 +34,23 @@ const StyledSection = styled.section`
   }
 `;
 
+const carrouselOptions: Props = {
+  animationDuration: 2000,
+  animationType: 'fadeout',
+  autoPlay: true,
+  autoPlayStrategy: 'all',
+  autoWidth: true,
+  disableButtonsControls: true,
+  disableDotsControls: true,
+  infinite: true,
+  items: slides,
+  mouseTracking: true,
+};
+
 const Carrousel: React.FC = () => {
   return (
     <StyledSection>
-      <Carousel
-        animationDuration={10000}
-        animationType={'fadeout'}
-        autoPlay
-        autoPlayStrategy={'none'}
-        autoWidth
-        disableButtonsControls
-        disableDotsControls
-        infinite
-        items={slides}
-        mouseTracking
-      />
+      <Carousel {...carrouselOptions} />
     </StyledSection>
   );
 };
