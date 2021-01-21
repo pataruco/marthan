@@ -13,6 +13,10 @@ const StyledDiv = styled.div`
     display: block;
   }
 
+  p {
+    line-height: 1.5em;
+  }
+
   img,
   svg {
     display: block;
