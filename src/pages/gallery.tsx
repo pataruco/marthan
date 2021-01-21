@@ -53,6 +53,7 @@ const Gallery: React.FC = () => {
 
   return (
     <>
+      <Header />
       <GalleryMain>
         <h1>Galería</h1>
         <section>

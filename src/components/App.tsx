@@ -3,13 +3,13 @@ import styled from 'styled-components';
 import 'normalize.css';
 
 const StyledDiv = styled.div`
-  @import 'node_modules/@ibm/plex/scss/ibm-plex.scss';
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,400;1,700&family=IBM+Plex+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 
-  font-family: 'IBM Plex Sans Condensed', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
   font-size: 100%;
   line-height: 1.5em;
 

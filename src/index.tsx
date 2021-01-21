@@ -33,8 +33,8 @@ if (rootElement && rootElement.hasChildNodes()) {
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 
-if (NODE_ENV === 'production') {
-  serviceWorker.register();
-} else {
-  serviceWorker.unregister();
-}
+// if (NODE_ENV === 'production') {
+//   serviceWorker.register();
+// } else {
+//   serviceWorker.unregister();
+// }
