@@ -1,14 +1,14 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
 import Footer from '../components/footer';
+import Head from '../components/head';
 import Header from '../components/header';
 import MainWrapper from '../components/main';
 
 const ErrorPage: React.FC = () => (
   <>
-    <Helmet>
+    <Head>
       <title>Pedro Marthan | 404</title>
-    </Helmet>
+    </Head>
     <Header />
     <main>
       <MainWrapper>
