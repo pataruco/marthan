@@ -28,7 +28,7 @@ const GalleryMain = styled(Main)`
     }
   }
 
-  @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+  @media only screen and (max-device-width: 812px) {
     section {
       & > * {
         flex-basis: calc(50% - 1.25rem);
