@@ -7,6 +7,16 @@ const StyledFooter = styled.footer`
   color: white;
   display: flex;
   justify-content: space-between;
+
+  & > p {
+    max-width: 100% !important;
+    flex-basis: 100%;
+    margin-bottom: initial;
+  }
+
+  & > p:last-of-type {
+    text-align: end;
+  }
 `;
 
 const updateTime = new Intl.DateTimeFormat('es-VE', {

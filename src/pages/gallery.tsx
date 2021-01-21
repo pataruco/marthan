@@ -23,10 +23,11 @@ const GalleryMain = styled(Main)`
     & > * {
       flex-basis: calc(33.33% - 1.25rem);
       margin-bottom: 1.25rem;
+      cursor: pointer;
     }
   }
 
-  @media screen and (max-width: 800px) {
+  @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
     section {
       & > * {
         flex-basis: calc(50% - 1.25rem);
@@ -52,7 +53,6 @@ const Gallery: React.FC = () => {
 
   return (
     <>
-      <Header />
       <GalleryMain>
         <h1>Galería</h1>
         <section>
