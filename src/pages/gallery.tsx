@@ -11,6 +11,7 @@ import Header from '../components/header';
 import Main from '../components/main';
 import Footer from '../components/footer';
 import styled from 'styled-components';
+import MainWrapper from '../components/main';
 
 const imagesPaths800 = imagesPaths.map((path) => path[800]);
 const imagesPaths250 = imagesPaths.map((path) => path[250]);
@@ -53,26 +54,31 @@ const Gallery: React.FC = () => {
 
   return (
     <>
-      <GalleryMain>
-        <h1>Galería</h1>
-        <section>
-          {imagesPaths250.map((imagePath, i) => {
-            return (
-              <article key={i} onClick={handleClick} data-slide-number={i}>
-                <picture>
-                  <img src={imagePath} alt={imagePath} />
-                </picture>
-              </article>
-            );
-          })}
-        </section>
+      <Header />
+      <main>
+        <MainWrapper>
+          <GalleryMain>
+            <h2>Galería</h2>
+            <section>
+              {imagesPaths250.map((imagePath, i) => {
+                return (
+                  <article key={i} onClick={handleClick} data-slide-number={i}>
+                    <picture>
+                      <img src={imagePath} alt={imagePath} />
+                    </picture>
+                  </article>
+                );
+              })}
+            </section>
 
-        <FsLightbox
-          toggler={isOpen}
-          sources={imagesPaths800}
-          slide={slideNumber}
-        />
-      </GalleryMain>
+            <FsLightbox
+              toggler={isOpen}
+              sources={imagesPaths800}
+              slide={slideNumber}
+            />
+          </GalleryMain>
+        </MainWrapper>
+      </main>
       <Footer />
     </>
   );

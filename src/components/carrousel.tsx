@@ -9,7 +9,8 @@ const paths800 = paths.map((path) => path[800]);
 
 const handleDragStart = (e: React.MouseEvent) => e.preventDefault();
 
-const slides = paths800.map((path) => {
+const slides: JSX.Element[] = paths800.map((path) => {
+  /* eslint-disable-line no-eval */
   return (
     <picture className="slide">
       <img src={path} onDragStart={handleDragStart} alt="" />
@@ -18,16 +19,13 @@ const slides = paths800.map((path) => {
 });
 
 const StyledSection = styled.section`
-  min-height: 45vh;
   background-color: rgb(0, 0, 0);
-
-  .carrousel-wrapper {
-    max-width: 50%;
-    margin: 0 auto;
-  }
+  width: 100%;
+  max-width: 100%;
 
   .alice-carousel__stage-item {
     width: 100% !important;
+    margin: 0 1.25rem;
   }
 
   .slide {
@@ -39,21 +37,20 @@ const StyledSection = styled.section`
 const Carrousel: React.FC = () => {
   return (
     <StyledSection>
-      <div className="carrousel-wrapper">
-        <Carousel
-          animationDuration={10000}
-          animationType={'fadeout'}
-          autoPlay
-          autoPlayStrategy={'none'}
-          autoWidth
-          // autoHeight
-          disableButtonsControls
-          disableDotsControls
-          infinite
-          items={slides}
-          mouseTracking
-        />
-      </div>
+      <Carousel
+        animationDuration={10000}
+        animationType={'fadeout'}
+        autoPlay
+        autoPlayStrategy={'none'}
+        autoWidth
+        disableButtonsControls
+        disableDotsControls
+        infinite
+        items={slides}
+        mouseTracking
+      />
     </StyledSection>
   );
 };
+
+export default Carrousel;
