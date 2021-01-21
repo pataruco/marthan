@@ -36,7 +36,7 @@ const StyledSection = styled.section`
 
 const carrouselOptions: Props = {
   animationDuration: 2000,
-  animationType: 'fadeout',
+  // animationType: 'fadeout',
   autoPlay: true,
   autoPlayStrategy: 'all',
   autoWidth: true,
@@ -45,6 +45,11 @@ const carrouselOptions: Props = {
   infinite: true,
   items: slides,
   mouseTracking: true,
+  responsive: {
+    1024: {
+      items: 1,
+    },
+  },
 };
 
 const Carrousel: React.FC = () => {

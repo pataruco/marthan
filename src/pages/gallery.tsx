@@ -12,6 +12,7 @@ import Main from '../components/main';
 import Footer from '../components/footer';
 import styled from 'styled-components';
 import MainWrapper from '../components/main';
+import { Helmet } from 'react-helmet';
 
 const imagesPaths800 = imagesPaths.map((path) => path[800]);
 const imagesPaths250 = imagesPaths.map((path) => path[250]);
@@ -54,6 +55,9 @@ const Gallery: React.FC = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Pedro Marthan | Galería</title>
+      </Helmet>
       <Header />
       <main>
         <MainWrapper>
