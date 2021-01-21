@@ -8,6 +8,22 @@ const StyledFooter = styled.footer`
   display: flex;
   justify-content: space-between;
 
+  a {
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+    &:hover {
+      border-bottom: 2px solid rgba(255, 255, 255, 0.75);
+      margin-bottom: -1px solid;
+    }
+    &:active {
+      border-bottom: 3px solid rgba(255, 255, 255, 0.75);
+      margin-bottom: -2px solid;
+    }
+    &:visited {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+  }
+
   & > p {
     max-width: 100% !important;
     flex-basis: 100%;
@@ -34,7 +50,15 @@ const Footer = () => (
       <span role="img" arial-title="amor">
         ❤️
       </span>{' '}
-      por Pedro y Yoana
+      por{' '}
+      <a
+        href="https://www.linkedin.com/in/pataruco/"
+        target="_blank"
+        rel="noopener"
+      >
+        Pedro
+      </a>{' '}
+      y Yoana
     </p>
     <p>
       Actualizado el <time dateTime={datimeString}>{updateTime}</time>

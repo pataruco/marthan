@@ -1,44 +1,62 @@
-// @ts-nocheck
-import React, { useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import { useDispatch, useSelector } from 'react-redux';
-import paths from '../lib/paths';
-import {
-  selectHero,
-  changeBackgroundInterval,
-  TRANSITION_TIME,
-} from '../redux/hero/heroSlice';
-
-const setBackgroundImage = (props) => props.backgroundImageUrl || paths[0][800];
+import { Link } from 'react-router-dom';
 
 const StyledHeader = styled.header`
-  @keyframes flash {
-    0% {
-      opacity: 0.1;
-      background-color: rgb(127, 127, 127);
-    }
+  background-color: rgb(0, 0, 0);
+  padding: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    100% {
-      opacity: 1;
-      background-color: rgb(0, 0, 0);
+  h1 a {
+    color: white;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    li {
+      margin-left: 1.25rem;
+      a {
+        color: white;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+        &:hover {
+          border-bottom: 2px solid rgba(255, 255, 255, 0.75);
+          margin-bottom: -1px solid;
+        }
+        &:active {
+          border-bottom: 3px solid rgba(255, 255, 255, 0.75);
+          margin-bottom: -2px solid;
+        }
+        &:visited {
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+      }
     }
   }
-  background-image: url(${setBackgroundImage});
-  min-height: 45vh;
-  background-repeat: no-repeat;
-  background-position: top center;
-  animation: flash linear alternate infinite ${TRANSITION_TIME}s;
 `;
 
 const Header: React.FC = () => {
-  const dispatch = useDispatch();
-  const { backgroundImagePath } = useSelector(selectHero);
-
-  useEffect(() => {
-    dispatch(changeBackgroundInterval());
-  }, [dispatch]);
-
-  return <StyledHeader backgroundImageUrl={backgroundImagePath} />;
+  return (
+    <StyledHeader>
+      <h1>
+        <Link to="/">Pedro Marthan</Link>
+      </h1>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/">Inicio</Link>
+          </li>
+          <li>
+            <Link to="/gallery">Galería</Link>
+          </li>
+        </ul>
+      </nav>
+    </StyledHeader>
+  );
 };
 
 export default Header;

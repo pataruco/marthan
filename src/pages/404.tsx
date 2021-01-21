@@ -1,28 +1,22 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
-
-import styled from 'styled-components';
-
-const StyledMain = styled.main`
-  padding: 1.25rem;
-
-  li {
-    margin-bottom: 0.5rem;
-  }
-
-  a {
-    color: black;
-    text-decoration: none;
-    &:hover {
-      border-bottom: 2px solid red;
-    }
-  }
-`;
+import Footer from '../components/footer';
+import Head from '../components/head';
+import Header from '../components/header';
+import MainWrapper from '../components/main';
 
 const ErrorPage: React.FC = () => (
-  <StyledMain>
-    <h1>404</h1>
-  </StyledMain>
+  <>
+    <Head>
+      <title>Pedro Marthan | 404</title>
+    </Head>
+    <Header />
+    <main>
+      <MainWrapper>
+        <h2>404</h2>
+      </MainWrapper>
+    </main>
+    <Footer />
+  </>
 );
 
 export default ErrorPage;

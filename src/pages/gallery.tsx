@@ -11,6 +11,8 @@ import Header from '../components/header';
 import Main from '../components/main';
 import Footer from '../components/footer';
 import styled from 'styled-components';
+import MainWrapper from '../components/main';
+import Head from '../components/head';
 
 const imagesPaths800 = imagesPaths.map((path) => path[800]);
 const imagesPaths250 = imagesPaths.map((path) => path[250]);
@@ -27,7 +29,7 @@ const GalleryMain = styled(Main)`
     }
   }
 
-  @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+  @media only screen and (max-device-width: 812px) {
     section {
       & > * {
         flex-basis: calc(50% - 1.25rem);
@@ -53,26 +55,34 @@ const Gallery: React.FC = () => {
 
   return (
     <>
-      <GalleryMain>
-        <h1>Galería</h1>
-        <section>
-          {imagesPaths250.map((imagePath, i) => {
-            return (
-              <article key={i} onClick={handleClick} data-slide-number={i}>
-                <picture>
-                  <img src={imagePath} alt={imagePath} />
-                </picture>
-              </article>
-            );
-          })}
-        </section>
+      <Head>
+        <title>Pedro Marthan | Galería</title>
+      </Head>
+      <Header />
+      <main>
+        <MainWrapper>
+          <GalleryMain>
+            <h2>Galería</h2>
+            <section>
+              {imagesPaths250.map((imagePath, i) => {
+                return (
+                  <article key={i} onClick={handleClick} data-slide-number={i}>
+                    <picture>
+                      <img src={imagePath} alt={imagePath} />
+                    </picture>
+                  </article>
+                );
+              })}
+            </section>
 
-        <FsLightbox
-          toggler={isOpen}
-          sources={imagesPaths800}
-          slide={slideNumber}
-        />
-      </GalleryMain>
+            <FsLightbox
+              toggler={isOpen}
+              sources={imagesPaths800}
+              slide={slideNumber}
+            />
+          </GalleryMain>
+        </MainWrapper>
+      </main>
       <Footer />
     </>
   );
