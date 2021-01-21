@@ -1,6 +1,6 @@
 import React from 'react';
 import FsLightbox from 'fslightbox-react';
-import imagesPaths from '../components/gallery/paths';
+import imagesPaths from '../lib/paths';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   selectGallery,

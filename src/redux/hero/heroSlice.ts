@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { AppThunk, RootState } from '../store';
-import backgroundImagePaths from '../../components/gallery/paths';
+import backgroundImagePaths from '../../lib/paths';
 
 interface HeroState {
   backgroundImagePath: string;
