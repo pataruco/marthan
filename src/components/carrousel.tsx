@@ -4,6 +4,7 @@ import 'react-alice-carousel/lib/alice-carousel.css';
 import Carousel from 'react-alice-carousel';
 import { Props } from 'react-alice-carousel/lib/types';
 import paths from '../lib/paths';
+import Image from './image';
 
 const paths800 = paths.map((path) => path[800]);
 
@@ -12,8 +13,8 @@ const handleDragStart = (e: React.MouseEvent) => e.preventDefault();
 const slides: JSX.Element[] = paths800.map((path) => {
   /* eslint-disable-line no-eval */
   return (
-    <picture className="slide">
-      <img src={path} onDragStart={handleDragStart} alt="" />
+    <picture className="slide" onDragStart={handleDragStart}>
+      <Image src={path} alt="" width="100%" />
     </picture>
   );
 });
