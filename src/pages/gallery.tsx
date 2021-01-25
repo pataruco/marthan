@@ -13,6 +13,7 @@ import Footer from '../components/footer';
 import styled from 'styled-components';
 import MainWrapper from '../components/main';
 import Head from '../components/head';
+import Image from '../components/image';
 
 const imagesPaths800 = imagesPaths.map((path) => path[800]);
 const imagesPaths250 = imagesPaths.map((path) => path[250]);
@@ -68,7 +69,7 @@ const Gallery: React.FC = () => {
                 return (
                   <article key={i} onClick={handleClick} data-slide-number={i}>
                     <picture>
-                      <img src={imagePath} alt={imagePath} />
+                      <Image src={imagePath} alt={imagePath} />
                     </picture>
                   </article>
                 );
