@@ -4,110 +4,179 @@ const paths = [
   {
     800: `${PUBLIC_URL}/images/800/04.png`,
     250: `${PUBLIC_URL}/images/250/04.png`,
+    footnote: null,
+    year: null,
   },
   {
     800: `${PUBLIC_URL}/images/800/05.png`,
     250: `${PUBLIC_URL}/images/250/05.png`,
+    footnote: ['Premio mejor primer actor', 'Círculo de críticos de teatro'],
+    year: 1978,
   },
   {
     800: `${PUBLIC_URL}/images/800/06.png`,
     250: `${PUBLIC_URL}/images/250/06.png`,
+    footnote: ['Las Pantuflas.', 'Director: Romeo Costea'],
+    year: 1983,
   },
   {
     800: `${PUBLIC_URL}/images/800/07.png`,
     250: `${PUBLIC_URL}/images/250/07.png`,
+    footnote: null,
+    year: null,
   },
   {
     800: `${PUBLIC_URL}/images/800/08.png`,
     250: `${PUBLIC_URL}/images/250/08.png`,
+    footnote: null,
+    year: 1956,
   },
   {
     800: `${PUBLIC_URL}/images/800/09.png`,
     250: `${PUBLIC_URL}/images/250/09.png`,
+    footnote: ['El rincón del malo.', ' Autor: Gilberto Pinto'],
+    year: 1956,
   },
   {
     800: `${PUBLIC_URL}/images/800/10.png`,
     250: `${PUBLIC_URL}/images/250/10.png`,
+    footnote: ['El extraño de Simón el malo'],
+    year: null,
   },
   {
     800: `${PUBLIC_URL}/images/800/11.png`,
     250: `${PUBLIC_URL}/images/250/11.png`,
+    footnote: null,
+    year: null,
   },
   {
     800: `${PUBLIC_URL}/images/800/12.png`,
     250: `${PUBLIC_URL}/images/250/12.png`,
+    footnote: ['El tirano Aguirre'],
+    year: 1956,
   },
   {
     800: `${PUBLIC_URL}/images/800/13.png`,
     250: `${PUBLIC_URL}/images/250/13.png`,
+    footnote: ['Cantaclaro'],
+    year: 1957,
   },
   {
     800: `${PUBLIC_URL}/images/800/14.png`,
     250: `${PUBLIC_URL}/images/250/14.png`,
+    footnote: ['1er. aniversario de Televisa'],
+    year: 1953,
   },
   {
     800: `${PUBLIC_URL}/images/800/15.png`,
     250: `${PUBLIC_URL}/images/250/15.png`,
+    footnote: [
+      'Juego de niños, de Ruiz Iriarte.',
+      'Programa: Teatro del hogar',
+      'Una escena con Aldo Monti, Ciro Medina, Liliana Durán y Reyna Hidalgo',
+    ],
+    year: 1956,
   },
   {
     800: `${PUBLIC_URL}/images/800/16.png`,
     250: `${PUBLIC_URL}/images/250/16.png`,
+    footnote: ['Shubert', 'Programa especial para TV'],
+    year: 1956,
   },
   {
     800: `${PUBLIC_URL}/images/800/17.png`,
     250: `${PUBLIC_URL}/images/250/17.png`,
+    footnote: ['Telenovela en Televisa'],
+    year: 1957,
   },
   {
     800: `${PUBLIC_URL}/images/800/18.png`,
     250: `${PUBLIC_URL}/images/250/18.png`,
+    footnote: ['Piar de Ali Lasser', 'Dirección: Romeo Costea'],
+    year: 1975,
   },
   {
     800: `${PUBLIC_URL}/images/800/19.png`,
     250: `${PUBLIC_URL}/images/250/19.png`,
+    footnote: [
+      'Dulce pajaro de juventud de Tenesse Williams',
+      'Dirección: Romeo Costea',
+    ],
+    year: 1988,
   },
   {
     800: `${PUBLIC_URL}/images/800/20.png`,
     250: `${PUBLIC_URL}/images/250/20.png`,
+    footnote: ['La Mandrágora de Nicólas Maquiavelo'],
+    year: 1965,
   },
   {
     800: `${PUBLIC_URL}/images/800/21.png`,
     250: `${PUBLIC_URL}/images/250/21.png`,
+    footnote: [
+      'Todos los días son sábados',
+      'Dirección: Enver Cordido',
+      'Guión: Salvador Garmendia',
+    ],
+    year: 1977,
   },
   {
     800: `${PUBLIC_URL}/images/800/22.png`,
     250: `${PUBLIC_URL}/images/250/22.png`,
+    footnote: ['Teatro del hogar', 'Televisa'],
+    year: 1958,
   },
   {
     800: `${PUBLIC_URL}/images/800/23.png`,
     250: `${PUBLIC_URL}/images/250/23.png`,
+    footnote: ['Las Pantuflas.', 'Director: Romeo Costea'],
+    year: 1983,
   },
   {
     800: `${PUBLIC_URL}/images/800/24.png`,
     250: `${PUBLIC_URL}/images/250/24.png`,
+    footnote: ['Telenovela', 'Televisa'],
+    year: 1958,
   },
   {
     800: `${PUBLIC_URL}/images/800/25.png`,
     250: `${PUBLIC_URL}/images/250/25.png`,
+    footnote: ['Teatro del hogar', 'Televisa'],
+    year: 1958,
   },
   {
     800: `${PUBLIC_URL}/images/800/26.png`,
     250: `${PUBLIC_URL}/images/250/26.png`,
+    footnote: ['Teatro del hogar', 'Televisa'],
+    year: 1958,
   },
   {
     800: `${PUBLIC_URL}/images/800/27.png`,
     250: `${PUBLIC_URL}/images/250/27.png`,
+    footnote: ['Ha llegado un inspector de John Boynton Priestley'],
+    year: 1960,
   },
   {
     800: `${PUBLIC_URL}/images/800/28.png`,
     250: `${PUBLIC_URL}/images/250/28.png`,
+    footnote: null,
+    year: 1948,
   },
   {
     800: `${PUBLIC_URL}/images/800/29.png`,
     250: `${PUBLIC_URL}/images/250/29.png`,
+    footnote: null,
+    year: 1958,
   },
   {
     800: `${PUBLIC_URL}/images/800/30.png`,
     250: `${PUBLIC_URL}/images/250/30.png`,
+    footnote: [
+      'Todos los días son sábados',
+      'Dirección: Enver Cordido',
+      'Guión: Salvador Garmendia',
+    ],
+    year: 1977,
   },
   {
     800: `${PUBLIC_URL}/images/800/31.png`,
@@ -120,6 +189,8 @@ const paths = [
   {
     800: `${PUBLIC_URL}/images/800/33.png`,
     250: `${PUBLIC_URL}/images/250/33.png`,
+    footnote: ['Madame Pompinette'],
+    year: 1978,
   },
   {
     800: `${PUBLIC_URL}/images/800/34.png`,
@@ -128,6 +199,8 @@ const paths = [
   {
     800: `${PUBLIC_URL}/images/800/35.png`,
     250: `${PUBLIC_URL}/images/250/35.png`,
+    footnote: ['Madame Pompinette'],
+    year: 1978,
   },
   {
     800: `${PUBLIC_URL}/images/800/36.png`,
@@ -228,6 +301,11 @@ const paths = [
   {
     800: `${PUBLIC_URL}/images/800/60.png`,
     250: `${PUBLIC_URL}/images/250/60.png`,
+    footnote: [
+      'Dulce pajaro de juventud de Tenesse Williams',
+      'Dirección: Romeo Costea',
+    ],
+    year: 1988,
   },
   {
     800: `${PUBLIC_URL}/images/800/61.png`,
@@ -328,6 +406,8 @@ const paths = [
   {
     800: `${PUBLIC_URL}/images/800/88.png`,
     250: `${PUBLIC_URL}/images/250/88.png`,
+    footnote: null,
+    year: 1958,
   },
   {
     800: `${PUBLIC_URL}/images/800/89.png`,
@@ -368,6 +448,8 @@ const paths = [
   {
     800: `${PUBLIC_URL}/images/800/98.png`,
     250: `${PUBLIC_URL}/images/250/98.png`,
+    year: 1980,
+    footnote: null,
   },
   {
     800: `${PUBLIC_URL}/images/800/99.png`,
