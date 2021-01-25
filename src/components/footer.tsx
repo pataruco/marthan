@@ -20,7 +20,7 @@ const StyledFooter = styled.footer`
       margin-bottom: -2px solid;
     }
     &:visited {
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.6);
     }
   }
 
