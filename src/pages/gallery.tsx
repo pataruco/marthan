@@ -9,10 +9,32 @@ import Footer from '../components/footer';
 import styled from 'styled-components';
 import MainWrapper from '../components/main';
 import Head from '../components/head';
+import Captions from '../components/captions';
 
 import GalleryItem from '../components/GalleryItem';
 
-const imagesPaths800 = imagesPaths.map((path) => path[800]);
+interface PathItem {
+  footnote: string[] | null;
+  year: number | null;
+  imagePath: string;
+  800?: string;
+}
+
+const byYear = (a: PathItem, b: PathItem) =>
+  a.year !== null && b.year !== null ? a.year - b.year : -1;
+
+const imagesPaths800 = imagesPaths
+  .map((path) => {
+    const { footnote, year, 800: imagePath } = path;
+    return {
+      footnote,
+      year,
+      imagePath,
+    };
+  })
+  .sort(byYear)
+  .map((path) => path.imagePath);
+
 const imagesPaths250 = imagesPaths
   .map((path) => {
     const { footnote, year, 250: imagePath } = path;
@@ -22,7 +44,7 @@ const imagesPaths250 = imagesPaths
       imagePath,
     };
   })
-  .sort((a, b) => (a.year !== null && b.year !== null ? a.year - b.year : -1));
+  .sort(byYear);
 
 const GalleryMain = styled(Main)`
   section {
@@ -61,7 +83,7 @@ const Gallery: React.FC = () => {
             <section>
               {imagesPaths250.map((info, i) => {
                 const galleryProps = { ...info, id: i };
-                return <GalleryItem {...galleryProps} />;
+                return <GalleryItem {...galleryProps} key={i} />;
               })}
             </section>
 
@@ -69,6 +91,8 @@ const Gallery: React.FC = () => {
               toggler={isOpen}
               sources={imagesPaths800}
               slide={slideNumber}
+              // @ts-ignore
+              captions={Captions(imagesPaths250)}
             />
           </GalleryMain>
         </MainWrapper>

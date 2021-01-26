@@ -19,7 +19,7 @@ interface FootnoteProps {
   footnote: GalleryItemProps['footnote'];
 }
 
-const Year: React.FC<YearElementProps> = ({ year }) =>
+export const Year: React.FC<YearElementProps> = ({ year }) =>
   year ? (
     <p>
       <time dateTime={String(year)}>{year}</time>
@@ -28,7 +28,7 @@ const Year: React.FC<YearElementProps> = ({ year }) =>
     <p>Fecha desconocida</p>
   );
 
-const Footnote = ({ footnote }: FootnoteProps) =>
+export const Footnote = ({ footnote }: FootnoteProps) =>
   Array.isArray(footnote)
     ? footnote.map((note, i) => <p key={i}>{note}</p>)
     : null;
