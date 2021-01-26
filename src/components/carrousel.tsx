@@ -9,6 +9,7 @@ import {
   ScrollPosition,
   trackWindowScroll,
 } from 'react-lazy-load-image-component';
+import StyledScrollIcon from '../components/scroll-down';
 
 const paths800 = paths.map((path) => path[800]);
 
@@ -88,6 +89,7 @@ const Carrousel: React.FC<CarrouselProps> = ({ scrollPosition }) => {
   return (
     <StyledSection>
       <Carousel {...carrouselOptions} />
+      <StyledScrollIcon />
     </StyledSection>
   );
 };

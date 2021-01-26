@@ -4,13 +4,10 @@ import imagesPaths from '../lib/paths';
 import { useSelector } from 'react-redux';
 import { selectGallery } from '../redux/gallery/gallerySlice';
 import Header from '../components/header';
-import Main from '../components/main';
 import Footer from '../components/footer';
 import styled from 'styled-components';
-import MainWrapper from '../components/main';
 import Head from '../components/head';
 import Captions from '../components/captions';
-
 import GalleryItem from '../components/GalleryItem';
 
 interface PathItem {
