@@ -46,8 +46,13 @@ const imagesPaths250 = imagesPaths
   })
   .sort(byYear);
 
-const GalleryMain = styled(Main)`
-  section {
+const StyledMain = styled.main`
+  max-width: 980px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 1.25rem;
+
+  & > section {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -76,27 +81,23 @@ const Gallery: React.FC = () => {
         <title>Pedro Marthan | Galería</title>
       </Head>
       <Header />
-      <main>
-        <MainWrapper>
-          <GalleryMain>
-            <h2>Galería</h2>
-            <section>
-              {imagesPaths250.map((info, i) => {
-                const galleryProps = { ...info, id: i };
-                return <GalleryItem {...galleryProps} key={i} />;
-              })}
-            </section>
+      <StyledMain>
+        <h2>Galería</h2>
+        <section>
+          {imagesPaths250.map((info, i) => {
+            const galleryProps = { ...info, id: i };
+            return <GalleryItem {...galleryProps} key={i} />;
+          })}
+        </section>
 
-            <FsLightbox
-              toggler={isOpen}
-              sources={imagesPaths800}
-              slide={slideNumber}
-              // @ts-ignore
-              captions={Captions(imagesPaths250)}
-            />
-          </GalleryMain>
-        </MainWrapper>
-      </main>
+        <FsLightbox
+          toggler={isOpen}
+          sources={imagesPaths800}
+          slide={slideNumber}
+          // @ts-ignore
+          captions={Captions(imagesPaths250)}
+        />
+      </StyledMain>
       <Footer />
     </>
   );
