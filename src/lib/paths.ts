@@ -2,12 +2,6 @@ const { PUBLIC_URL } = process.env;
 
 const paths = [
   {
-    800: `${PUBLIC_URL}/images/800/04.png`,
-    250: `${PUBLIC_URL}/images/250/04.png`,
-    footnote: null,
-    year: null,
-  },
-  {
     800: `${PUBLIC_URL}/images/800/05.png`,
     250: `${PUBLIC_URL}/images/250/05.png`,
     footnote: ['Premio mejor primer actor', 'Círculo de críticos de teatro'],
@@ -18,12 +12,6 @@ const paths = [
     250: `${PUBLIC_URL}/images/250/06.png`,
     footnote: ['Las Pantuflas.', 'Director: Romeo Costea'],
     year: 1983,
-  },
-  {
-    800: `${PUBLIC_URL}/images/800/07.png`,
-    250: `${PUBLIC_URL}/images/250/07.png`,
-    footnote: null,
-    year: null,
   },
   {
     800: `${PUBLIC_URL}/images/800/08.png`,
@@ -43,12 +31,7 @@ const paths = [
     footnote: ['El extraño viaje de Simón el malo'],
     year: 1970,
   },
-  {
-    800: `${PUBLIC_URL}/images/800/11.png`,
-    250: `${PUBLIC_URL}/images/250/11.png`,
-    footnote: null,
-    year: null,
-  },
+
   {
     800: `${PUBLIC_URL}/images/800/12.png`,
     250: `${PUBLIC_URL}/images/250/12.png`,
@@ -240,30 +223,7 @@ const paths = [
     ],
     year: 1977,
   },
-  {
-    800: `${PUBLIC_URL}/images/800/38.png`,
-    250: `${PUBLIC_URL}/images/250/38.png`,
-    footnote: null,
-    year: null,
-  },
-  {
-    800: `${PUBLIC_URL}/images/800/39.png`,
-    250: `${PUBLIC_URL}/images/250/39.png`,
-    footnote: ['Telenovela en Televisa'],
-    year: null,
-  },
-  {
-    800: `${PUBLIC_URL}/images/800/40.png`,
-    250: `${PUBLIC_URL}/images/250/40.png`,
-    footnote: null,
-    year: null,
-  },
-  {
-    800: `${PUBLIC_URL}/images/800/41.png`,
-    250: `${PUBLIC_URL}/images/250/41.png`,
-    footnote: ['Telenovela en Televisa'],
-    year: null,
-  },
+
   {
     800: `${PUBLIC_URL}/images/800/42.png`,
     250: `${PUBLIC_URL}/images/250/42.png`,
@@ -273,36 +233,7 @@ const paths = [
     ],
     year: 1948,
   },
-  {
-    800: `${PUBLIC_URL}/images/800/43.png`,
-    250: `${PUBLIC_URL}/images/250/43.png`,
-    footnote: null,
-    year: null,
-  },
-  {
-    800: `${PUBLIC_URL}/images/800/44.png`,
-    250: `${PUBLIC_URL}/images/250/44.png`,
-    footnote: null,
-    year: null,
-  },
-  {
-    800: `${PUBLIC_URL}/images/800/45.png`,
-    250: `${PUBLIC_URL}/images/250/45.png`,
-    footnote: null,
-    year: null,
-  },
-  {
-    800: `${PUBLIC_URL}/images/800/46.png`,
-    250: `${PUBLIC_URL}/images/250/46.png`,
-    footnote: ['Telenovela en Televisa'],
-    year: null,
-  },
-  {
-    800: `${PUBLIC_URL}/images/800/47.png`,
-    250: `${PUBLIC_URL}/images/250/47.png`,
-    footnote: null,
-    year: null,
-  },
+
   {
     800: `${PUBLIC_URL}/images/800/48.png`,
     250: `${PUBLIC_URL}/images/250/48.png`,
@@ -363,12 +294,7 @@ const paths = [
     ],
     year: 1978,
   },
-  {
-    800: `${PUBLIC_URL}/images/800/54.png`,
-    250: `${PUBLIC_URL}/images/250/54.png`,
-    footnote: null,
-    year: null,
-  },
+
   {
     800: `${PUBLIC_URL}/images/800/55.png`,
     250: `${PUBLIC_URL}/images/250/55.png`,
@@ -389,24 +315,14 @@ const paths = [
     ],
     year: 1975,
   },
-  {
-    800: `${PUBLIC_URL}/images/800/57.png`,
-    250: `${PUBLIC_URL}/images/250/57.png`,
-    footnote: ['George Dandin o el marido confundido de Molière'],
-    year: null,
-  },
+
   {
     800: `${PUBLIC_URL}/images/800/58.png`,
     250: `${PUBLIC_URL}/images/250/58.png`,
     footnote: ['Programa: Teatro del hogar'],
     year: 1956,
   },
-  {
-    800: `${PUBLIC_URL}/images/800/59.png`,
-    250: `${PUBLIC_URL}/images/250/59.png`,
-    footnote: null,
-    year: null,
-  },
+
   {
     800: `${PUBLIC_URL}/images/800/60.png`,
     250: `${PUBLIC_URL}/images/250/60.png`,
@@ -415,6 +331,212 @@ const paths = [
       'Dirección: Romeo Costea',
     ],
     year: 1988,
+  },
+
+  {
+    800: `${PUBLIC_URL}/images/800/63.png`,
+    250: `${PUBLIC_URL}/images/250/63.png`,
+    footnote: [
+      'Dulce pajaro de juventud de Tenesse Williams',
+      'Dirección: Romeo Costea',
+    ],
+    year: 1988,
+  },
+
+  {
+    800: `${PUBLIC_URL}/images/800/77.png`,
+    250: `${PUBLIC_URL}/images/250/77.png`,
+    footnote: [
+      'Trampa para un hombre solo de Robert Thomas',
+      'Dirección: Gilberto Pinto',
+      'Bárbara Teyde en la foto',
+    ],
+    year: 1975,
+  },
+
+  {
+    800: `${PUBLIC_URL}/images/800/87.png`,
+    250: `${PUBLIC_URL}/images/250/87.png`,
+    footnote: null,
+    year: 1946,
+  },
+  {
+    800: `${PUBLIC_URL}/images/800/88.png`,
+    250: `${PUBLIC_URL}/images/250/88.png`,
+    footnote: null,
+    year: 1958,
+  },
+  {
+    800: `${PUBLIC_URL}/images/800/89.png`,
+    250: `${PUBLIC_URL}/images/250/89.png`,
+    footnote: [
+      'Pedido de mano de Anton Chejov',
+      'Primera obra de teatro donde actuó',
+    ],
+    year: 1948,
+  },
+
+  {
+    800: `${PUBLIC_URL}/images/800/93.png`,
+    250: `${PUBLIC_URL}/images/250/93.png`,
+    footnote: [
+      'Trampa para un hombre solo de Robert Thomas',
+      'Dirección: Gilberto Pinto',
+      'Bárbara Teyde en la foto',
+    ],
+    year: 1975,
+  },
+  {
+    800: `${PUBLIC_URL}/images/800/94.png`,
+    250: `${PUBLIC_URL}/images/250/94.png`,
+    footnote: [
+      'Todos los días son sábados',
+      'Dirección: Enver Cordido',
+      'Guión: Salvador Garmendia',
+    ],
+    year: 1977,
+  },
+  {
+    800: `${PUBLIC_URL}/images/800/95.png`,
+    250: `${PUBLIC_URL}/images/250/95.png`,
+    footnote: [
+      'Todos los días son sábados',
+      'Dirección: Enver Cordido',
+      'Guión: Salvador Garmendia',
+    ],
+    year: 1977,
+  },
+  {
+    800: `${PUBLIC_URL}/images/800/96.png`,
+    250: `${PUBLIC_URL}/images/250/96.png`,
+    footnote: [
+      'Dulce pajaro de juventud de Tenesse Williams',
+      'Dirección: Romeo Costea',
+    ],
+    year: 1988,
+  },
+  {
+    800: `${PUBLIC_URL}/images/800/97.png`,
+    250: `${PUBLIC_URL}/images/250/97.png`,
+    footnote: ['El tirano Aguirre'],
+    year: 1956,
+  },
+  {
+    800: `${PUBLIC_URL}/images/800/98.png`,
+    250: `${PUBLIC_URL}/images/250/98.png`,
+    footnote: null,
+    year: 1980,
+  },
+  {
+    800: `${PUBLIC_URL}/images/800/99.png`,
+    250: `${PUBLIC_URL}/images/250/99.png`,
+    footnote: [
+      'Trampa para un hombre solo de Robert Thomas',
+      'Dirección: Gilberto Pinto',
+      'Bárbara Teyde en la foto',
+    ],
+    year: 1975,
+  },
+
+  {
+    800: `${PUBLIC_URL}/images/800/101.png`,
+    250: `${PUBLIC_URL}/images/250/101.png`,
+    footnote: [
+      'Pedido de mano de Anton Chejov',
+      'Primera obra de teatro donde actuó',
+    ],
+    year: 1948,
+  },
+
+  {
+    800: `${PUBLIC_URL}/images/800/04.png`,
+    250: `${PUBLIC_URL}/images/250/04.png`,
+    footnote: null,
+    year: null,
+  },
+  {
+    800: `${PUBLIC_URL}/images/800/07.png`,
+    250: `${PUBLIC_URL}/images/250/07.png`,
+    footnote: null,
+    year: null,
+  },
+  {
+    800: `${PUBLIC_URL}/images/800/11.png`,
+    250: `${PUBLIC_URL}/images/250/11.png`,
+    footnote: null,
+    year: null,
+  },
+  {
+    800: `${PUBLIC_URL}/images/800/38.png`,
+    250: `${PUBLIC_URL}/images/250/38.png`,
+    footnote: null,
+    year: null,
+  },
+  {
+    800: `${PUBLIC_URL}/images/800/39.png`,
+    250: `${PUBLIC_URL}/images/250/39.png`,
+    footnote: ['Telenovela en Televisa'],
+    year: null,
+  },
+  {
+    800: `${PUBLIC_URL}/images/800/40.png`,
+    250: `${PUBLIC_URL}/images/250/40.png`,
+    footnote: null,
+    year: null,
+  },
+  {
+    800: `${PUBLIC_URL}/images/800/41.png`,
+    250: `${PUBLIC_URL}/images/250/41.png`,
+    footnote: ['Telenovela en Televisa'],
+    year: null,
+  },
+  {
+    800: `${PUBLIC_URL}/images/800/43.png`,
+    250: `${PUBLIC_URL}/images/250/43.png`,
+    footnote: null,
+    year: null,
+  },
+  {
+    800: `${PUBLIC_URL}/images/800/44.png`,
+    250: `${PUBLIC_URL}/images/250/44.png`,
+    footnote: null,
+    year: null,
+  },
+  {
+    800: `${PUBLIC_URL}/images/800/45.png`,
+    250: `${PUBLIC_URL}/images/250/45.png`,
+    footnote: null,
+    year: null,
+  },
+  {
+    800: `${PUBLIC_URL}/images/800/46.png`,
+    250: `${PUBLIC_URL}/images/250/46.png`,
+    footnote: ['Telenovela en Televisa'],
+    year: null,
+  },
+  {
+    800: `${PUBLIC_URL}/images/800/47.png`,
+    250: `${PUBLIC_URL}/images/250/47.png`,
+    footnote: null,
+    year: null,
+  },
+  {
+    800: `${PUBLIC_URL}/images/800/54.png`,
+    250: `${PUBLIC_URL}/images/250/54.png`,
+    footnote: null,
+    year: null,
+  },
+  {
+    800: `${PUBLIC_URL}/images/800/57.png`,
+    250: `${PUBLIC_URL}/images/250/57.png`,
+    footnote: ['George Dandin o el marido confundido de Molière'],
+    year: null,
+  },
+  {
+    800: `${PUBLIC_URL}/images/800/59.png`,
+    250: `${PUBLIC_URL}/images/250/59.png`,
+    footnote: null,
+    year: null,
   },
   {
     800: `${PUBLIC_URL}/images/800/61.png`,
@@ -427,15 +549,6 @@ const paths = [
     250: `${PUBLIC_URL}/images/250/62.png`,
     footnote: ['Con Eva Blanco'],
     year: null,
-  },
-  {
-    800: `${PUBLIC_URL}/images/800/63.png`,
-    250: `${PUBLIC_URL}/images/250/63.png`,
-    footnote: [
-      'Dulce pajaro de juventud de Tenesse Williams',
-      'Dirección: Romeo Costea',
-    ],
-    year: 1988,
   },
   {
     800: `${PUBLIC_URL}/images/800/64.png`,
@@ -498,16 +611,6 @@ const paths = [
     year: null,
   },
   {
-    800: `${PUBLIC_URL}/images/800/77.png`,
-    250: `${PUBLIC_URL}/images/250/77.png`,
-    footnote: [
-      'Trampa para un hombre solo de Robert Thomas',
-      'Dirección: Gilberto Pinto',
-      'Bárbara Teyde en la foto',
-    ],
-    year: 1975,
-  },
-  {
     800: `${PUBLIC_URL}/images/800/78.png`,
     250: `${PUBLIC_URL}/images/250/78.png`,
     footnote: null,
@@ -562,27 +665,6 @@ const paths = [
     year: null,
   },
   {
-    800: `${PUBLIC_URL}/images/800/87.png`,
-    250: `${PUBLIC_URL}/images/250/87.png`,
-    footnote: null,
-    year: 1946,
-  },
-  {
-    800: `${PUBLIC_URL}/images/800/88.png`,
-    250: `${PUBLIC_URL}/images/250/88.png`,
-    footnote: null,
-    year: 1958,
-  },
-  {
-    800: `${PUBLIC_URL}/images/800/89.png`,
-    250: `${PUBLIC_URL}/images/250/89.png`,
-    footnote: [
-      'Pedido de mano de Anton Chejov',
-      'Primera obra de teatro donde actuó',
-    ],
-    year: 1948,
-  },
-  {
     800: `${PUBLIC_URL}/images/800/90.png`,
     250: `${PUBLIC_URL}/images/250/90.png`,
     footnote: null,
@@ -601,42 +683,10 @@ const paths = [
     year: null,
   },
   {
-    800: `${PUBLIC_URL}/images/800/93.png`,
-    250: `${PUBLIC_URL}/images/250/93.png`,
-  },
-  {
-    800: `${PUBLIC_URL}/images/800/94.png`,
-    250: `${PUBLIC_URL}/images/250/94.png`,
-  },
-  {
-    800: `${PUBLIC_URL}/images/800/95.png`,
-    250: `${PUBLIC_URL}/images/250/95.png`,
-  },
-  {
-    800: `${PUBLIC_URL}/images/800/96.png`,
-    250: `${PUBLIC_URL}/images/250/96.png`,
-  },
-  {
-    800: `${PUBLIC_URL}/images/800/97.png`,
-    250: `${PUBLIC_URL}/images/250/97.png`,
-  },
-  {
-    800: `${PUBLIC_URL}/images/800/98.png`,
-    250: `${PUBLIC_URL}/images/250/98.png`,
-    year: 1980,
-    footnote: null,
-  },
-  {
-    800: `${PUBLIC_URL}/images/800/99.png`,
-    250: `${PUBLIC_URL}/images/250/99.png`,
-  },
-  {
     800: `${PUBLIC_URL}/images/800/100.png`,
     250: `${PUBLIC_URL}/images/250/100.png`,
-  },
-  {
-    800: `${PUBLIC_URL}/images/800/101.png`,
-    250: `${PUBLIC_URL}/images/250/101.png`,
+    footnote: null,
+    year: null,
   },
 ];
 

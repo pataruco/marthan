@@ -1,22 +1,28 @@
 import React from 'react';
 import FsLightbox from 'fslightbox-react';
 import imagesPaths from '../lib/paths';
-import { useDispatch, useSelector } from 'react-redux';
-import {
-  selectGallery,
-  setSlideNumber,
-  toggleOpen,
-} from '../redux/gallery/gallerySlice';
+import { useSelector } from 'react-redux';
+import { selectGallery } from '../redux/gallery/gallerySlice';
 import Header from '../components/header';
 import Main from '../components/main';
 import Footer from '../components/footer';
 import styled from 'styled-components';
 import MainWrapper from '../components/main';
 import Head from '../components/head';
-import Image from '../components/image';
+
+import GalleryItem from '../components/GalleryItem';
 
 const imagesPaths800 = imagesPaths.map((path) => path[800]);
-const imagesPaths250 = imagesPaths.map((path) => path[250]);
+const imagesPaths250 = imagesPaths
+  .map((path) => {
+    const { footnote, year, 250: imagePath } = path;
+    return {
+      footnote,
+      year,
+      imagePath,
+    };
+  })
+  .sort((a, b) => (a.year !== null && b.year !== null ? a.year - b.year : -1));
 
 const GalleryMain = styled(Main)`
   section {
@@ -40,19 +46,7 @@ const GalleryMain = styled(Main)`
 `;
 
 const Gallery: React.FC = () => {
-  const dispatch = useDispatch();
   const { isOpen, slideNumber } = useSelector(selectGallery);
-
-  const handleClick = (event: React.MouseEvent) => {
-    const { currentTarget } = event;
-
-    const cardNumber =
-      Number(currentTarget.getAttribute('data-slide-number')) ?? 1;
-
-    event.preventDefault();
-    dispatch(toggleOpen());
-    dispatch(setSlideNumber(cardNumber + 1));
-  };
 
   return (
     <>
@@ -65,14 +59,9 @@ const Gallery: React.FC = () => {
           <GalleryMain>
             <h2>Galería</h2>
             <section>
-              {imagesPaths250.map((imagePath, i) => {
-                return (
-                  <article key={i} onClick={handleClick} data-slide-number={i}>
-                    <picture>
-                      <Image src={imagePath} alt={imagePath} />
-                    </picture>
-                  </article>
-                );
+              {imagesPaths250.map((info, i) => {
+                const galleryProps = { ...info, id: i };
+                return <GalleryItem {...galleryProps} />;
               })}
             </section>
 
