@@ -1,25 +1,58 @@
 import React from 'react';
 import FsLightbox from 'fslightbox-react';
 import imagesPaths from '../lib/paths';
-import { useDispatch, useSelector } from 'react-redux';
-import {
-  selectGallery,
-  setSlideNumber,
-  toggleOpen,
-} from '../redux/gallery/gallerySlice';
+import { useSelector } from 'react-redux';
+import { selectGallery } from '../redux/gallery/gallerySlice';
 import Header from '../components/header';
 import Main from '../components/main';
 import Footer from '../components/footer';
 import styled from 'styled-components';
 import MainWrapper from '../components/main';
 import Head from '../components/head';
-import Image from '../components/image';
+import Captions from '../components/captions';
 
-const imagesPaths800 = imagesPaths.map((path) => path[800]);
-const imagesPaths250 = imagesPaths.map((path) => path[250]);
+import GalleryItem from '../components/GalleryItem';
 
-const GalleryMain = styled(Main)`
-  section {
+interface PathItem {
+  footnote: string[] | null;
+  year: number | null;
+  imagePath: string;
+  800?: string;
+}
+
+const byYear = (a: PathItem, b: PathItem) =>
+  a.year !== null && b.year !== null ? a.year - b.year : -1;
+
+const imagesPaths800 = imagesPaths
+  .map((path) => {
+    const { footnote, year, 800: imagePath } = path;
+    return {
+      footnote,
+      year,
+      imagePath,
+    };
+  })
+  .sort(byYear)
+  .map((path) => path.imagePath);
+
+const imagesPaths250 = imagesPaths
+  .map((path) => {
+    const { footnote, year, 250: imagePath } = path;
+    return {
+      footnote,
+      year,
+      imagePath,
+    };
+  })
+  .sort(byYear);
+
+const StyledMain = styled.main`
+  max-width: 980px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 1.25rem;
+
+  & > section {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -40,19 +73,7 @@ const GalleryMain = styled(Main)`
 `;
 
 const Gallery: React.FC = () => {
-  const dispatch = useDispatch();
   const { isOpen, slideNumber } = useSelector(selectGallery);
-
-  const handleClick = (event: React.MouseEvent) => {
-    const { currentTarget } = event;
-
-    const cardNumber =
-      Number(currentTarget.getAttribute('data-slide-number')) ?? 1;
-
-    event.preventDefault();
-    dispatch(toggleOpen());
-    dispatch(setSlideNumber(cardNumber + 1));
-  };
 
   return (
     <>
@@ -60,30 +81,23 @@ const Gallery: React.FC = () => {
         <title>Pedro Marthan | Galería</title>
       </Head>
       <Header />
-      <main>
-        <MainWrapper>
-          <GalleryMain>
-            <h2>Galería</h2>
-            <section>
-              {imagesPaths250.map((imagePath, i) => {
-                return (
-                  <article key={i} onClick={handleClick} data-slide-number={i}>
-                    <picture>
-                      <Image src={imagePath} alt={imagePath} />
-                    </picture>
-                  </article>
-                );
-              })}
-            </section>
+      <StyledMain>
+        <h2>Galería</h2>
+        <section>
+          {imagesPaths250.map((info, i) => {
+            const galleryProps = { ...info, id: i };
+            return <GalleryItem {...galleryProps} key={i} />;
+          })}
+        </section>
 
-            <FsLightbox
-              toggler={isOpen}
-              sources={imagesPaths800}
-              slide={slideNumber}
-            />
-          </GalleryMain>
-        </MainWrapper>
-      </main>
+        <FsLightbox
+          toggler={isOpen}
+          sources={imagesPaths800}
+          slide={slideNumber}
+          // @ts-ignore
+          captions={Captions(imagesPaths250)}
+        />
+      </StyledMain>
       <Footer />
     </>
   );
