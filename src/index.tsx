@@ -2,10 +2,7 @@ import React from 'react';
 import { hydrate, render } from 'react-dom';
 import { store } from './redux/store';
 import { Provider } from 'react-redux';
-import * as serviceWorker from './utils/serviceWorker';
 import Routes from './routes';
-
-const { NODE_ENV } = process.env;
 
 const rootElement = document.getElementById('root');
 
@@ -27,14 +24,4 @@ if (rootElement && rootElement.hasChildNodes()) {
     </React.StrictMode>,
     rootElement,
   );
-}
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-
-if (NODE_ENV === 'production') {
-  serviceWorker.register();
-} else {
-  serviceWorker.unregister();
 }
