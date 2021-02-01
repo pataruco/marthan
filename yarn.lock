@@ -11138,10 +11138,10 @@ raw-body@2.4.0:
     iconv-lite "0.4.24"
     unpipe "1.0.0"
 
-react-alice-carousel@^2.2.2:
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/react-alice-carousel/-/react-alice-carousel-2.2.2.tgz#9709c4b8fbcd99fdd010dc01fc463793b30bbe5d"
-  integrity sha512-hk4QyPDZtHh03avuNBuT/A+CojFdPyB/xi3wehyta+e0EvzlxS8286u82/IkWt4TceGcTWHCltdes6u/DNBgkQ==
+react-alice-carousel@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/react-alice-carousel/-/react-alice-carousel-2.3.0.tgz#31472d14d0eca13a6d0ab2bce1c1968f3850d696"
+  integrity sha512-PJOvWQnQ91LuC+QAmghY+C+9hbG7KuC2+FQDZXRds98RAsv2CCSMwi/ewhATDcwbtvJZjw8M8zn32uf2m4hmnQ==
   dependencies:
     vanilla-swipe "^2.2.0"
 
