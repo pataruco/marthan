@@ -1,0 +1,19 @@
+footer {
+	background-color: var(--black);
+	padding: var(--base-space);
+	color: var(--white);
+
+	& .content-wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	& p {
+		margin: 0;
+	}
+
+	& a {
+		color: var(--white);
+	}
+}
