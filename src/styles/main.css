@@ -73,4 +73,9 @@ svg {
 
 main {
 	flex: 1 1 auto;
+	padding: var(--base-space);
+
+	& h2 {
+		margin-top: 0;
+	}
 }

@@ -1,0 +1,26 @@
+.gallery {
+	display: flex;
+	gap: var(--base-space);
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	& > * {
+		flex-basis: calc(33.33% - var(--base-space));
+		text-decoration: none;
+	}
+
+	& footer {
+		padding: 0;
+		margin-top: calc(var(--base-space) / 2);
+		background-color: unset;
+		color: var(--black);
+		& p {
+			margin-bottom: 0.125rem;
+		}
+
+		p:first-of-type {
+			font-weight: bold;
+			font-size: 1.15rem;
+		}
+	}
+}
