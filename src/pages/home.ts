@@ -24,7 +24,11 @@ const chunkArray = <T>(array: T[], chunkSize: number): T[][] => {
 	return chunks;
 };
 
-const numberOfItemsPerGroup = window.innerWidth > 800 ? 2 : 1;
+let numberOfItemsPerGroup = window.innerWidth > 800 ? 2 : 1;
+
+window.addEventListener("resize", () => {
+	numberOfItemsPerGroup = window.innerWidth > 800 ? 2 : 1;
+});
 
 const pathsGroupedByN = chunkArray(shuffleArray(paths), numberOfItemsPerGroup);
 
