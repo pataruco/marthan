@@ -1,3 +1,4 @@
+import "../shared/footer";
 import { paths } from "../shared/paths";
 
 const galleryWrapper = document.querySelector(".gallery");
