@@ -29,8 +29,9 @@ const renderGallery = () => {
 		galleryWrapper.innerHTML = gallery;
 	}
 
-	// Refresh FSLightbox to recognize new images
+	// @ts-expect-error
 	if (typeof refreshFsLightbox !== "undefined") {
+		// @ts-expect-error
 		refreshFsLightbox();
 	}
 };
