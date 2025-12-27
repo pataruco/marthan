@@ -22,6 +22,9 @@ class SiteHeader extends HTMLElement {
                   <li>
                     <a href="/cronicas-y-relatos/pasado-y-presente.html">Pasado y presente</a>
                   </li>
+                  <li>
+                    <a href="/cronicas-y-relatos/el-ensayo-frustrado.html">El ensayo frustrado</a>
+                  </li>
                 </ul>
               </details>
             </li>
@@ -64,24 +67,11 @@ class SiteHeader extends HTMLElement {
         color: var(--white);
         appearance: none;
         position: relative;
+        cursor: pointer;
       }
 
       details[open] summary span {
         position: relative;
-      }
-
-      details[open] summary span::before {
-        width: 100%;
-        height: var(--spacing-1);
-        background: var(--foreground-primary);
-        display: block;
-        content: '';
-        position: absolute;
-        bottom: calc(-0.75rem + 1px);
-      }
-
-      details[open] summary span::after {
-        background-image: url(icons.$chevron-up-navy);
       }
 
       details[open] ul {
@@ -98,8 +88,10 @@ class SiteHeader extends HTMLElement {
 
       nav ul ul {
         margin: 0;
-        padding: 0;
         list-style: none;
+        padding: 0;
+        padding-left: 1.1rem;
+        width: max-content;
       }
     `;
 
