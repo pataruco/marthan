@@ -21,11 +21,49 @@ header {
     color: var(--white);
   }
 
-  & ul {
+  & details {
+      color: var(--white);
+      appearance: none;
+      position: relative;
+
+      &[open] {
+          &  summary span {
+            position: relative;
+
+            &::before {
+              width: 100%;
+              height: var(--spacing-1);
+              background: var(--foreground-primary);
+              display: block;
+              content: '';
+              position: absolute;
+              bottom: calc(-0.75rem + 1px);
+            }
+
+            &::after {
+              background-image: url(icons.$chevron-up-navy);
+            }
+          }
+          & ul {
+              position: absolute;
+          }
+      }
+
+
+
+  }
+
+  &  nav > ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     column-gap: var(--base-space);
+
+    &  ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
   }
 }
