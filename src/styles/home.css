@@ -1,10 +1,14 @@
-.carrousel {
+.bio {
+	padding: 0 var(--base-space);
+	margin-bottom: var(--base-space);
+}
+
+.carousel {
 	background-color: var(--black);
 	margin-bottom: var(--base-space);
+	padding: 0 var(--base-space);
 	& ul {
-		/*width: calc(100vw - var(--max-width));*/
 		display: flex;
-		gap: 4vw;
 		margin: 0;
 		padding: 0;
 		list-style-type: none;
@@ -23,8 +27,8 @@
 	}
 
 	& picture {
-		height: 40vh;
-		max-width: calc(33.33% - var(--base-space));
+		height: 50vh;
+		max-width: calc(50% - var(--base-space));
 	}
 
 	& img {
@@ -32,5 +36,18 @@
 		max-height: 100%;
 		object-fit: cover;
 		max-width: unset;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.carousel {
+		& li {
+			justify-content: center;
+		}
+
+		& picture {
+			height: 50vh;
+			max-width: 100%;
+		}
 	}
 }
