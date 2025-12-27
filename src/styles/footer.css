@@ -17,3 +17,15 @@ footer {
 		color: var(--white);
 	}
 }
+
+@media screen and (max-width: 800px) {
+	footer {
+		& .content-wrapper {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		& p:not(:last-child) {
+			margin-bottom: 1rem;
+		}
+	}
+}
