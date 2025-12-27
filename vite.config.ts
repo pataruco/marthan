@@ -5,7 +5,6 @@ import type { UserConfig } from 'vite';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export default {
-  base: '/marthan/',
   build: {
     minify: 'terser',
     rollupOptions: {
