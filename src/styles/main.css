@@ -5,8 +5,8 @@
 :root {
 	--black: rgb(0, 0, 0);
 	--white: rgb(255, 255, 255);
-
 	--base-space: 1.25rem;
+	--max-width: 72rem;
 }
 
 body {
@@ -53,10 +53,8 @@ picture {
 	display: block;
 }
 
-p,
-ul {
+p {
 	max-width: 42rem;
-	/*margin: 0 auto;*/
 }
 
 img,
@@ -67,14 +65,12 @@ svg {
 }
 
 .content-wrapper {
-	max-width: 72rem;
+	max-width: var(--max-width);
 	margin: 0 auto;
 }
 
 main {
 	flex: 1 1 auto;
-	padding: var(--base-space);
-
 	& h2 {
 		margin-top: 0;
 	}
