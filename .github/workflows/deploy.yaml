@@ -15,7 +15,7 @@ concurrency:
   cancel-in-progress: true
 jobs:
   lint-format:
-    uses: './.github/workflows/format-lint.yml'
+    uses: './.github/workflows/pr.yaml'
   deploy:
     environment:
       name: github-pages
