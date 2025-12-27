@@ -1,4 +1,6 @@
 import '../shared/footer';
+import '../components/header';
+
 import { paths } from '../shared/paths';
 
 // Function to shuffle array using Fisher-Yates algorithm
