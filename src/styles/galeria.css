@@ -1,5 +1,5 @@
 main > section {
-	padding: var(--base-space) var(--base-space) 0;
+	padding: var(--base-space);
 }
 
 .gallery {
