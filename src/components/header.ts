@@ -89,9 +89,10 @@ class SiteHeader extends HTMLElement {
       nav ul ul {
         margin: 0;
         list-style: none;
-        padding: 0;
-        padding-left: 1.1rem;
+        padding: 1.1rem;
         width: max-content;
+        background-color: var(--black);
+        box-shadow: 0 12px 16px -4px #10182814,0 4px 6px -2px #10182808;
       }
     `;
 

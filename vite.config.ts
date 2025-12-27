@@ -11,6 +11,14 @@ export default {
       input: {
         main: resolve(__dirname, 'index.html'),
         galeria: resolve(__dirname, 'galeria/index.html'),
+        'cronicas-y-relatos/el-ensayo-frustrado': resolve(
+          __dirname,
+          'cronicas-y-relatos/el-ensayo-frustrado.html',
+        ),
+        'cronicas-y-relatos/pasado-y-presente': resolve(
+          __dirname,
+          'cronicas-y-relatos/pasado-y-presente.html',
+        ),
       },
     },
   },
