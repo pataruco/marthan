@@ -1,46 +1,46 @@
 main > section {
-	padding: var(--base-space);
+  padding: var(--base-space);
 }
 
 .gallery {
-	display: flex;
-	gap: var(--base-space);
-	flex-wrap: wrap;
-	justify-content: space-between;
+  display: flex;
+  gap: var(--base-space);
+  flex-wrap: wrap;
+  justify-content: space-between;
 
-	& > * {
-		flex-basis: calc(33.33% - var(--base-space));
-		text-decoration: none;
-	}
+  & > * {
+    flex-basis: calc(33.33% - var(--base-space));
+    text-decoration: none;
+  }
 
-	& footer {
-		padding: 0;
-		margin-top: calc(var(--base-space) / 2);
-		background-color: unset;
-		color: var(--black);
-		& p {
-			margin-bottom: 0.125rem;
-		}
+  & footer {
+    padding: 0;
+    margin-top: calc(var(--base-space) / 2);
+    background-color: unset;
+    color: var(--black);
+    & p {
+      margin-bottom: 0.125rem;
+    }
 
-		p:first-of-type {
-			font-weight: bold;
-			font-size: 1.15rem;
-		}
-	}
+    p:first-of-type {
+      font-weight: bold;
+      font-size: 1.15rem;
+    }
+  }
 }
 
 @media screen and (max-width: 800px) {
-	.gallery {
-		& > * {
-			flex-basis: calc(50% - var(--base-space));
-		}
-	}
+  .gallery {
+    & > * {
+      flex-basis: calc(50% - var(--base-space));
+    }
+  }
 }
 
 @media screen and (max-width: 400px) {
-	.gallery {
-		& > * {
-			flex-basis: 100%;
-		}
-	}
+  .gallery {
+    & > * {
+      flex-basis: 100%;
+    }
+  }
 }
