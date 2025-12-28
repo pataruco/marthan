@@ -1,6 +1,6 @@
 import '../components/header';
 import '../components/footer';
-import '../shared/cookies';
+import '../components/cookies';
 
 import { paths } from '../shared/paths';
 
