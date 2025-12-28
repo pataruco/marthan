@@ -11,8 +11,8 @@
 
 body {
   font-family: "IBM Plex Sans", sans-serif;
-  font-size: 100%;
-  line-height: 1.75;
+  font-size: 1.125rem;
+  line-height: 1.5555555556;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -73,5 +73,9 @@ main {
   flex: 1 1 auto;
   & h2 {
     margin-top: 0;
+  }
+
+  & li {
+    margin-block-end: 0.25rem;
   }
 }
