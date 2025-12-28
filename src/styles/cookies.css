@@ -1,0 +1,47 @@
+.cookies {
+  &.show {
+    display: block;
+  }
+  display: none;
+  padding: var(--base-space);
+  & menu {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    column-gap: var(--base-space);
+  }
+
+  & button {
+    appearance: none;
+    padding: 0.25rem 0.5rem;
+
+    &:first-of-type {
+      background-color: var(--white);
+      border: 1px solid var(--black);
+      color: var(--black);
+      &:hover {
+        background-color: color(from var(--black) srgb r g b / 0.1);
+      }
+      &:active {
+        background-color: color(from var(--black) srgb r g b / 0.25);
+      }
+    }
+
+    &:last-of-type {
+      background-color: var(--black);
+      border: 1px solid var(--black);
+      color: var(--white);
+
+      &:hover {
+        background-color: color(from var(--black) srgb r g b / 0.75);
+      }
+      &:active {
+        background-color: color(from var(--black) srgb r g b / 0.8);
+      }
+    }
+  }
+
+  h2 {
+    margin-top: 0;
+  }
+}
