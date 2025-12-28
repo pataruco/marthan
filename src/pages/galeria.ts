@@ -1,5 +1,7 @@
 import '../components/header';
 import '../components/footer';
+import '../components/cookies';
+
 import { paths } from '../shared/paths';
 
 const galleryWrapper = document.querySelector('.gallery');
