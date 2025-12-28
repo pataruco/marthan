@@ -30,6 +30,9 @@ class SiteFooter extends HTMLElement {
     // Add styles
     const style = document.createElement('style');
     style.textContent = `
+      * {
+        box-sizing: border-box;
+      }
       footer {
         background-color: var(--black);
         padding: var(--base-space);

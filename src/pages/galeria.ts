@@ -15,7 +15,7 @@ const renderGallery = () => {
 			data-caption="${footnote ? footnote.join(', ') : ''}"
 		>
 		  <picture>
-				<img src="${imgSrc}" alt="${footnote ? footnote.join(', ') : ''}" loading="lazy">
+				<img src="${imgSrc}" alt="${footnote ? footnote.join(', ') : ''}" loading="lazy" class="gallery-image">
 		  </picture>
 		  <footer>
 				<p>
