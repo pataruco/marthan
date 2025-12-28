@@ -1,2 +1,2 @@
-import '../shared/footer';
 import '../components/header';
+import '../components/footer';
