@@ -34,12 +34,37 @@ class SiteHeader extends HTMLElement {
             <li><a href="/galeria">Galería</a></li>
           </ul>
         </nav>
+        <button type="button" class="menu-toggle mobile-menu">Menú</button>
+        <menu class="mobile-menu">
+          <button type="button" class="menu-toggle">Cerrar</button>
+          <ul>
+            <li>
+              <span> Crónicas y relatos </span>
+              <ul>
+                <li>
+                  <a href="/cronicas-y-relatos/pasado-y-presente.html">Pasado y presente</a>
+                </li>
+                <li>
+                  <a href="/cronicas-y-relatos/el-ensayo-frustrado.html">El ensayo frustrado</a>
+                </li>
+                <li>
+                  <a href="/cronicas-y-relatos/armitana-ahora-habita-en-la-ciudad.html">Armitana ahora habita en la ciudad</a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="/galeria">Galería</a></li>
+          </ul>
+        </menu>
       </div>
     `;
 
     // Add styles
     const style = document.createElement('style');
     style.textContent = `
+      * {
+        box-sizing: border-box;
+      }
+
       header {
         background-color: var(--black);
         padding: var(--base-space);
@@ -63,19 +88,29 @@ class SiteHeader extends HTMLElement {
         text-decoration: none;
       }
 
-      a {
+      button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        appearance: none;
+        font-size: 1.125rem;
+        padding: 0;
+      }
+
+      a, button {
         color: var(--white);
         text-decoration-line: underline;
         text-decoration-thickness: 0.0625rem;
       }
 
-      a:hover {
+      a:hover, button:hover {
         text-decoration-color: color(from currentColor srgb r g b / 0.75);
         text-decoration-thickness: 0.125rem;
       }
 
       a:active,
-      a:focus {
+      a:focus,
+      button:focus {
         text-decoration-color: color(from currentColor srgb r g b / 0.75);
         text-decoration-thickness: 0.1875rem;
       }
@@ -195,11 +230,77 @@ class SiteHeader extends HTMLElement {
           background-color: var(--navy-100);
         }
       }
+
+      .mobile-menu {
+        display: none;
+      }
+
+      @media screen and (max-width: 800px) {
+        h1 {
+         font-size: 2.25rem;
+        }
+        .mobile-menu {
+          display: block;
+        }
+
+        header nav {
+          display: none;
+        }
+
+        menu {
+          --width: 300px;
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          position: fixed;
+          top: 0;
+          bottom: 0;
+          background-color: var(--black);
+          color: var(--white);
+          padding: 2.125rem var(--base-space);
+          width: var(--width);
+          right: calc(-1 * var(--width));
+          transition: all .3s;
+
+          &.open {
+            transform: translateX(calc(-1 * var(--width)));
+          }
+
+          & ul {
+            display: block;
+            padding: 1rem;
+          }
+
+          & li {
+           padding: 0;
+           margin-block-end: 0.25rem;
+          }
+        }
+      }
+
     `;
 
     // Append style and header to shadow root
     shadow.appendChild(style);
     shadow.appendChild(header);
+    // Add event listener for menu toggle
+    this.setupMenuToggle(shadow);
+  }
+
+  private setupMenuToggle(shadow: ShadowRoot): void {
+    const menuButtons = shadow.querySelectorAll(
+      '.menu-toggle',
+    ) as NodeListOf<HTMLButtonElement>;
+
+    const mobileMenu = shadow.querySelector('menu.mobile-menu') as HTMLElement;
+
+    menuButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        // Toggle the 'menu-open' class on the body element
+        mobileMenu.classList.toggle('open');
+        document.body.classList.toggle('menu-open');
+      });
+    });
   }
 }
 
