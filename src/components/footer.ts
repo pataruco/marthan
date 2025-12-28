@@ -50,6 +50,24 @@ class SiteFooter extends HTMLElement {
 
       a {
         color: var(--white);
+        text-decoration-line: underline;
+        text-decoration-thickness: 0.0625rem;
+      }
+
+      a:hover {
+        text-decoration-color: color(from currentColor srgb r g b / 0.75);
+        text-decoration-thickness: 0.125rem;
+      }
+
+      a:active,
+      a:focus {
+        text-decoration-color: color(from currentColor srgb r g b / 0.75);
+        text-decoration-thickness: 0.1875rem;
+      }
+
+      a:visited {
+        text-decoration-color: color(from currentColor srgb r g b / 0.1);
+        text-decoration-thickness: 0.0625rem;
       }
 
       @media screen and (max-width: 800px) {
