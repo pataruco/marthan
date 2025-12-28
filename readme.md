@@ -1,16 +1,16 @@
-# Marthan
+## Marthan
+https://pedromarthan.com
 
-My dad was Pedro Marthan, a renowned Venezuelan actor, director and professor. He passed away the 18 of January 2021
+My dad was Pedro Marthan, a renowned Venezuelan actor, director, and professor. He passed away on the 18th of January 2021.
 
 This website is dedicated to his memory and legacy.
 
-https://pedromarthan.com
 
 ## Development
 
-This website is built using plain old HTML, CSS and JavaScript. I am using Web Components to create reusable custom elements, such as header, footer, and cookie banner.
+This website is built using plain old HTML, CSS, and JavaScript. I am using Web Components to create reusable custom elements, such as a header, footer, and cookie banner.
 
-Is built using Vite and deployed using GitHub Pages.
+It is built using Vite and deployed using GitHub Pages.
 
 ### Local development
 
@@ -22,10 +22,10 @@ pnpm dev
 
 ```sh
 pnpm build
-pnpm preview
+pnpm preview    
 ```
 
-### Deployment
+## Deployment
 
 To deploy the website, create a Git tag and push it to the remote repository.
 
