@@ -15,7 +15,8 @@ Is built using Vite and deployed using GitHub Pages.
 ### Local development
 
 ```sh
-pnpm dev```
+pnpm dev
+```
 
 ### Production build
 
