@@ -31,7 +31,7 @@ class SiteHeader extends HTMLElement {
                 </ul>
               </details>
             </li>
-            <li><a href="/galeria">Galería</a></li>
+            <li><a href="/galeria/index.html">Galería</a></li>
           </ul>
         </nav>
         <button type="button" class="menu-toggle mobile-menu">Menú</button>
@@ -52,7 +52,7 @@ class SiteHeader extends HTMLElement {
                 </li>
               </ul>
             </li>
-            <li><a href="/galeria">Galería</a></li>
+            <li><a href="/galeria/index.html">Galería</a></li>
           </ul>
         </menu>
       </div>
