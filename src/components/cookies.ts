@@ -42,6 +42,10 @@ class CookieConsent extends HTMLElement {
         box-sizing: border-box;
       }
 
+      p {
+        max-width: 42rem;
+      }
+
       .cookies {
         display: none;
         padding: var(--base-space);
