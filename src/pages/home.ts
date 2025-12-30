@@ -43,7 +43,7 @@ const carouselItems = pathsGroupedByN.map((groupedByThree) => {
   return `
 	  <li>
 			${groupedByThree
-        .map(({ imgSrc, footnote }) => {
+        .map(({ imgSrc, footnote }, index) => {
           return `<picture>
                 <source
                   srcset="${imgSrc}"
@@ -52,7 +52,7 @@ const carouselItems = pathsGroupedByN.map((groupedByThree) => {
                 <img
                   src="${imgSrc}"
                   alt="${footnote ? footnote.map((item) => item).join('') : ''}"
-                  loading="lazy"
+                  loading="${index === 1 ? 'eager' : 'lazy'}"
                 />
               </picture>`;
         })
