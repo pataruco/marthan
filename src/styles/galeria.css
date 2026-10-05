@@ -2,6 +2,10 @@ main > section {
   padding: var(--base-space);
 }
 
+.gallery-groups > section {
+  margin-block-end: calc(var(--base-space) * 2);
+}
+
 .gallery {
   display: flex;
   gap: var(--base-space);
@@ -29,7 +33,7 @@ main > section {
       margin-bottom: 0.125rem;
     }
 
-    p:first-of-type {
+    .year {
       font-weight: bold;
       font-size: 1.15rem;
     }

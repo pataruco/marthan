@@ -2,7 +2,7 @@ import '../components/header';
 import '../components/footer';
 import '../components/cookies';
 
-import { paths } from '../shared/paths';
+import { altText, paths } from '../shared/paths';
 
 // Function to shuffle array using Fisher-Yates algorithm
 const shuffleArray = <T>(array: T[]): T[] => {
@@ -43,15 +43,15 @@ const carouselItems = pathsGroupedByN.map((groupedByThree) => {
   return `
 	  <li>
 			${groupedByThree
-        .map(({ imgSrc, footnote }, index) => {
+        .map((photo, index) => {
           return `<picture>
                 <source
-                  srcset="${imgSrc}"
+                  srcset="${photo.imgSrc}"
                   type="image/jpeg"
                 />
                 <img
-                  src="${imgSrc}"
-                  alt="${footnote ? footnote.map((item) => item).join('') : ''}"
+                  src="${photo.imgSrc}"
+                  alt="${altText(photo)}"
                   loading="${index === 1 ? 'eager' : 'lazy'}"
                 />
               </picture>`;
