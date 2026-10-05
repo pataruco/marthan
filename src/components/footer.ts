@@ -11,7 +11,7 @@ class SiteFooter extends HTMLElement {
     footer.innerHTML = `
       <div class="content-wrapper">
         <p>
-          Hecho con <span role="img" arial-title="amor">❤️</span> por
+          Hecho con <span role="img" aria-label="amor">❤️</span> por
           <a
             href="https://www.linkedin.com/in/pataruco/"
             target="_blank"

@@ -8,7 +8,7 @@ export const paths = [
   },
   {
     imgSrc: `${BASE_URL}/06.JPG`,
-    footnote: ['Las Pantuflas.', 'Director: Romeo Costea'],
+    footnote: ['Las Pantuflas', 'Director: Romeo Costea'],
     year: 1983,
   },
   {
@@ -18,7 +18,7 @@ export const paths = [
   },
   {
     imgSrc: `${BASE_URL}/09.JPG`,
-    footnote: ['El rincón del malo.', ' Autor: Gilberto Pinto'],
+    footnote: ['El rincón del malo', 'Autor: Gilberto Pinto'],
     year: 1956,
   },
   {
@@ -45,7 +45,7 @@ export const paths = [
   {
     imgSrc: `${BASE_URL}/15.JPG`,
     footnote: [
-      'Juego de niños, de Ruiz Iriarte.',
+      'Juego de niños, de Ruiz Iriarte',
       'Programa: Teatro del hogar',
       'Una escena con Aldo Monti, Ciro Medina, Liliana Durán y Reyna Hidalgo',
     ],
@@ -63,7 +63,7 @@ export const paths = [
   },
   {
     imgSrc: `${BASE_URL}/18.JPG`,
-    footnote: ['Piar de Ali Lasser', 'Dirección: Romeo Costea'],
+    footnote: ['Piar de Alí Lasser', 'Dirección: Romeo Costea'],
     year: 1975,
   },
   {
@@ -76,7 +76,7 @@ export const paths = [
   },
   {
     imgSrc: `${BASE_URL}/20.JPG`,
-    footnote: ['La Mandrágora de Nicólas Maquiavelo'],
+    footnote: ['La Mandrágora de Nicolás Maquiavelo'],
     year: 1965,
   },
   {
@@ -95,7 +95,7 @@ export const paths = [
   },
   {
     imgSrc: `${BASE_URL}/23.JPG`,
-    footnote: ['Las Pantuflas.', 'Director: Romeo Costea'],
+    footnote: ['Las Pantuflas', 'Director: Romeo Costea'],
     year: 1983,
   },
   {
@@ -596,3 +596,12 @@ export const paths = [
 ];
 
 export default paths;
+
+type Photo = (typeof paths)[number];
+
+export const formatCaption = ({ footnote }: Photo): string =>
+  footnote ? footnote.join(', ') : '';
+
+export const altText = (photo: Photo): string =>
+  formatCaption(photo) ||
+  `Pedro Marthan, fotografía ${photo.year ? `de ${photo.year}` : 'sin fecha'}`;
